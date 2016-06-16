@@ -1,0 +1,136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_extra_mail
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-16 06:28+0000\n"
+"PO-Revision-Date: 2016-06-16 08:33+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_ddt:0
+msgid "Address for send DDT"
+msgstr "Indirizzo email per spedizione DDT"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_picking:0
+msgid "Address for send generic picking document"
+msgstr ""
+"Indirizzo email per spedizione documento generico di movimentazione merce"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_invoice:0
+msgid "Address for send invoice"
+msgstr "Indirizzo email per spedizione fatture"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_order:0
+msgid "Address for send order"
+msgstr "Indirizzo email per spedizione ordine"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_confirmation:0
+msgid "Address for send order confirmation"
+msgstr "Indirizzo email per spedizione conferma d'ordine"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_payment:0
+msgid "Address for send payment request or information"
+msgstr ""
+"Indirizzo email per spedizione richieste di pagamento o informazioni ad essi "
+"relative"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_pricelist:0
+msgid "Address for send pricelist"
+msgstr "Indirizzo email per spedizione listini o prezzi in generale"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_promotional:0
+msgid "Address for send promotional material"
+msgstr "Indirizzo email per spedizione materiale promozionale"
+
+#. module: partner_extra_mail
+#: help:res.partner,email_quotation:0
+msgid "Address for send quotation"
+msgstr "Indirizzo email per spedizione offerte"
+
+#. module: partner_extra_mail
+#: view:res.partner:partner_extra_mail.view_res_partner_email_page_form
+msgid "CRM:"
+msgstr "CRM:"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_ddt:0
+msgid "DDT email"
+msgstr "Email DDT"
+
+#. module: partner_extra_mail
+#: view:res.partner:partner_extra_mail.view_res_partner_email_page_form
+msgid "Email"
+msgstr "Email"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_invoice:0
+msgid "Invoice email"
+msgstr "Email fatturazione"
+
+#. module: partner_extra_mail
+#: view:res.partner:partner_extra_mail.view_res_partner_email_page_form
+msgid "Invoice:"
+msgstr "Fatture:"
+
+#. module: partner_extra_mail
+#: view:res.partner:partner_extra_mail.view_res_partner_email_page_form
+msgid "Offer:"
+msgstr "Offerta:"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_confirmation:0
+msgid "Order confirm"
+msgstr "Conferma d'ordine"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_order:0
+msgid "Order email"
+msgstr "Email ordini"
+
+#. module: partner_extra_mail
+#: model:ir.model,name:partner_extra_mail.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_payment:0
+msgid "Payment email"
+msgstr "Email pagamenti"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_picking:0
+msgid "Picking email"
+msgstr "Email prelievi"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_pricelist:0
+msgid "Pricelist email"
+msgstr "Email listini"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_promotional:0
+msgid "Promotional email"
+msgstr "Email promozionali"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_quotation:0
+msgid "Quotation email"
+msgstr "Email offerte"

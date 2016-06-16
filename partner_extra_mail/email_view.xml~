@@ -19,6 +19,8 @@
                             <field name="email_confirmation" />
                             
                             <separator string="Invoice:" colspan="4" />
+                            <field name="email_ddt" />
+                            <field name="email_picking" />
                             <field name="email_invoice" />
                             <field name="email_payment" />
                         </group>
@@ -28,4 +30,3 @@
         </record>
     </data>
 </openerp>
-
