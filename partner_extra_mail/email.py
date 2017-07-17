@@ -65,6 +65,13 @@ class ResPartner(orm.Model):
         contact_name = '%s [%s]' % (current_proxy.name, name.split('_')[1])
         field_id = name.replace('address', 'id')
 
+        try: # remove extra spaces:
+            value = value.strip()
+        except:
+            return False
+        if not value:
+            return False    
+
         contact_id = current_proxy.__getattribute__(field_id).id
         if contact_id:
             self.write(cr, uid, contact_id, {
@@ -149,7 +156,7 @@ class ResPartner(orm.Model):
             type='char', string='Email payment', store=False, 
             ), 
 
-        # XXX To remove:    
+        # XXX To remove XXX:    
         'email_quotation': fields.char('Quotation email', size=80,
             help='Address for send quotation'),
         'email_order': fields.char('Order email', size=80,
