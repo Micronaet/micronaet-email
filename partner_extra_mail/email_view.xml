@@ -25,27 +25,6 @@
 
                             <field name="email_invoice_address" />
                             <field name="email_payment_address" />
-                            
-                            <!--remove:-->
-                            <field name="email_pricelist" invisible="1"/>
-                            <field name="email_pricelist_id" invisible="1" />
-                            <field name="email_promotional" invisible="1" />
-                            <field name="email_promotional" invisible="1" />
-                            <field name="email_quotation" invisible="1" />
-                            <field name="email_quotation_id" invisible="1" />
-                            <field name="email_order" invisible="1" />
-                            <field name="email_order" invisible="1" />
-                            <field name="email_confirmation" invisible="1" />
-                            <field name="email_confirmation" invisible="1" />
-                            <field name="email_ddt" invisible="1" />
-                            <field name="email_ddt" invisible="1" />
-                            <field name="email_picking" invisible="1" />
-                            <field name="email_picking" invisible="1" />
-                            <field name="email_invoice" invisible="1" />
-                            <field name="email_invoice" invisible="1" />
-                            <field name="email_payment" invisible="1" />
-                            <field name="email_payment" invisible="1" />
-                            
                         </group>
                     </page>
                 </xpath>
