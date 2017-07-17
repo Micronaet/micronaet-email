@@ -43,8 +43,113 @@ class ResPartner(orm.Model):
     """ Model name: ResPartner
     """    
     _inherit = 'res.partner'
-    
+
+    # -------------------------------------------------------------------------
+    # Field function:
+    # -------------------------------------------------------------------------
+    def _function_get_related_email(
+            self, cr, uid, ids, fields, args, context=None):
+        ''' Fields function for calculate 
+        '''
+        res = {}
+        field_id = fields.replace('address', 'id')
+        for partner in self.browse(cr, uid, ids, context=context):
+            res[partner.id] = partner.__getattribute__(field_id).email or False
+        return res
+
+    def _function_set_related_email(
+            self, cr, uid, partner_id, name, value, arg, context=None):
+        ''' Fields function for calculate context
+        '''
+        current_proxy = self.browse(cr, uid, partner_id, context=context)
+        contact_name = '%s [%s]' % (current_proxy.name, name.split('_')[1])
+        field_id = name.replace('address', 'id')
+
+        contact_id = current_proxy.__getattribute__(field_id).id
+        if contact_id:
+            self.write(cr, uid, contact_id, {
+                'email': value,
+                }, context=context)
+        else:
+            contact_id = self.create(cr, uid, {
+                'name': contact_name,
+                'email': value,
+                'parent_id': partner_id,
+                }, context=context)
+            self.write(cr, uid, partner_id, {
+                field_id: contact_id,
+                }, context=context)              
+        return True
+
     _columns = {
+        # Partner linked:
+        'email_quotation_id': fields.many2one(
+            'res.partner', 'Partner email quotation'),
+        'email_order_id': fields.many2one(
+            'res.partner', 'Partner email order'),
+        'email_confirmation_id': fields.many2one(
+            'res.partner', 'Partner email confirmation'),
+        'email_pricelist_id': fields.many2one(
+            'res.partner', 'Partner email pricelist'),
+        'email_picking_id': fields.many2one(
+            'res.partner', 'Partner email picking'),
+        'email_ddt_id': fields.many2one(
+            'res.partner', 'Partner email ddt'),
+        'email_invoice_id': fields.many2one(
+            'res.partner', 'Partner email invoice'),
+        'email_promotional_id': fields.many2one(
+            'res.partner', 'Partner email promotional'),
+        'email_payment_id': fields.many2one(
+            'res.partner', 'Partner email payment'),
+
+        # Related email:
+        'email_quotation_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email quotation', store=False, 
+            ), 
+        'email_order_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email order', store=False, 
+            ), 
+        'email_confirmation_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email confirmation', store=False, 
+            ), 
+        'email_pricelist_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email pricelist', store=False, 
+            ), 
+        'email_picking_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email picking', store=False, 
+            ), 
+        'email_ddt_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email ddt', store=False, 
+            ), 
+        'email_invoice_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email invoice', store=False, 
+            ), 
+        'email_promotional_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email promotional', store=False, 
+            ), 
+        'email_payment_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email payment', store=False, 
+            ), 
+
+        # XXX To remove:    
         'email_quotation': fields.char('Quotation email', size=80,
             help='Address for send quotation'),
         'email_order': fields.char('Order email', size=80,

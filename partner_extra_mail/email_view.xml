@@ -10,19 +10,42 @@
                     <page string="Email">
                         <group colspan="4" col="4" name="email_group">
                             <separator string="CRM:" colspan="4" />
-                            <field name="email_pricelist" />
-                            <field name="email_promotional" />
+                            <field name="email_pricelist_address" />
+                            <field name="email_promotional_address" />
 
                             <separator string="Offer:" colspan="4" />
-                            <field name="email_quotation" />
-                            <field name="email_order" />
-                            <field name="email_confirmation" />
+                            <field name="email_quotation_address" />
+                            <field name="email_order_address" />
+
+                            <field name="email_confirmation_address" />
                             
                             <separator string="Invoice:" colspan="4" />
-                            <field name="email_ddt" />
-                            <field name="email_picking" />
-                            <field name="email_invoice" />
-                            <field name="email_payment" />
+                            <field name="email_ddt_address" />
+                            <field name="email_picking_address" />
+
+                            <field name="email_invoice_address" />
+                            <field name="email_payment_address" />
+                            
+                            <!--remove:-->
+                            <field name="email_pricelist" invisible="1"/>
+                            <field name="email_pricelist_id" invisible="1" />
+                            <field name="email_promotional" invisible="1" />
+                            <field name="email_promotional" invisible="1" />
+                            <field name="email_quotation" invisible="1" />
+                            <field name="email_quotation_id" invisible="1" />
+                            <field name="email_order" invisible="1" />
+                            <field name="email_order" invisible="1" />
+                            <field name="email_confirmation" invisible="1" />
+                            <field name="email_confirmation" invisible="1" />
+                            <field name="email_ddt" invisible="1" />
+                            <field name="email_ddt" invisible="1" />
+                            <field name="email_picking" invisible="1" />
+                            <field name="email_picking" invisible="1" />
+                            <field name="email_invoice" invisible="1" />
+                            <field name="email_invoice" invisible="1" />
+                            <field name="email_payment" invisible="1" />
+                            <field name="email_payment" invisible="1" />
+                            
                         </group>
                     </page>
                 </xpath>
