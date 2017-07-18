@@ -60,10 +60,15 @@ class ResPartner(orm.Model):
     def _function_set_related_email(
             self, cr, uid, partner_id, name, value, arg, context=None):
         ''' Fields function for calculate context
-        '''
         current_proxy = self.browse(cr, uid, partner_id, context=context)
         contact_name = '%s [%s]' % (current_proxy.name, name.split('_')[1])
+        '''
+        current_proxy = self.browse(cr, uid, partner_id, context=context)
         field_id = name.replace('address', 'id')
+        contact_name = '%s [%s]' % (
+            current_proxy.name,
+            name.split('_')[1],
+            )
 
         try: # remove extra spaces:
             value = value.strip()
