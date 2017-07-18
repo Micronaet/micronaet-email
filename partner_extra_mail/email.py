@@ -63,13 +63,6 @@ class ResPartner(orm.Model):
         current_proxy = self.browse(cr, uid, partner_id, context=context)
         contact_name = '%s [%s]' % (current_proxy.name, name.split('_')[1])
         '''
-        current_proxy = self.browse(cr, uid, partner_id, context=context)
-        field_id = name.replace('address', 'id')
-        contact_name = '%s [%s]' % (
-            current_proxy.name,
-            name.split('_')[1],
-            )
-
         try: # remove extra spaces:
             value = value.strip()
         except:
@@ -77,16 +70,25 @@ class ResPartner(orm.Model):
         if not value:
             return False    
 
+        current_proxy = self.browse(cr, uid, partner_id, context=context)
+        field_id = name.replace('address', 'id')
+        contact_name = '%s [%s]' % (
+            current_proxy.name,
+            name.split('_')[1],
+            )
+
         contact_id = current_proxy.__getattribute__(field_id).id
         if contact_id:
             self.write(cr, uid, contact_id, {
                 'email': value,
+                'notify_email': 'always',
                 }, context=context)
         else:
             contact_id = self.create(cr, uid, {
                 'name': contact_name,
                 'email': value,
                 'parent_id': partner_id,
+                'notify_email': 'always',
                 }, context=context)
             self.write(cr, uid, partner_id, {
                 field_id: contact_id,
