@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-16 06:28+0000\n"
-"PO-Revision-Date: 2016-06-16 08:33+0100\n"
+"POT-Creation-Date: 2017-07-27 16:28+0000\n"
+"PO-Revision-Date: 2017-08-06 21:01+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -81,6 +81,51 @@ msgid "Email"
 msgstr "Email"
 
 #. module: partner_extra_mail
+#: field:res.partner,email_confirmation_address:0
+msgid "Email confirmation"
+msgstr "Email confirma"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_ddt_address:0
+msgid "Email ddt"
+msgstr "Email DDT"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_invoice_address:0
+msgid "Email invoice"
+msgstr "Email fattura"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_order_address:0
+msgid "Email order"
+msgstr "Email ordine"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_payment_address:0
+msgid "Email payment"
+msgstr "Email pagamenti"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_picking_address:0
+msgid "Email picking"
+msgstr "Email prelievi"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_pricelist_address:0
+msgid "Email pricelist"
+msgstr "Email listini"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_promotional_address:0
+msgid "Email promotional"
+msgstr "Email promozionale"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_quotation_address:0
+msgid "Email quotation"
+msgstr "Email offerta"
+
+#. module: partner_extra_mail
 #: field:res.partner,email_invoice:0
 msgid "Invoice email"
 msgstr "Email fatturazione"
@@ -109,6 +154,51 @@ msgstr "Email ordini"
 #: model:ir.model,name:partner_extra_mail.model_res_partner
 msgid "Partner"
 msgstr "Partner"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_confirmation_id:0
+msgid "Partner email confirmation"
+msgstr "Partner email conferma"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_ddt_id:0
+msgid "Partner email ddt"
+msgstr "Partner email DDT"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_invoice_id:0
+msgid "Partner email invoice"
+msgstr "Partner email fattura"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_order_id:0
+msgid "Partner email order"
+msgstr "Partner email ordine"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_payment_id:0
+msgid "Partner email payment"
+msgstr "Partner email pagamenti"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_picking_id:0
+msgid "Partner email picking"
+msgstr "Partner email prelievi"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_pricelist_id:0
+msgid "Partner email pricelist"
+msgstr "Partner email listini"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_promotional_id:0
+msgid "Partner email promotional"
+msgstr "Partner email promozionali"
+
+#. module: partner_extra_mail
+#: field:res.partner,email_quotation_id:0
+msgid "Partner email quotation"
+msgstr "Partner email offerte"
 
 #. module: partner_extra_mail
 #: field:res.partner,email_payment:0
