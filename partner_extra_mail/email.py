@@ -115,6 +115,8 @@ class ResPartner(orm.Model):
             'res.partner', 'Partner email promotional'),
         'email_payment_id': fields.many2one(
             'res.partner', 'Partner email payment'),
+        'email_pec_id': fields.many2one(
+            'res.partner', 'Partner email PEC'),
 
         # Related email:
         'email_quotation_address': fields.function(
@@ -161,6 +163,11 @@ class ResPartner(orm.Model):
             _function_get_related_email, 
             fnct_inv=_function_set_related_email, method=True, 
             type='char', string='Email payment', store=False, 
+            ), 
+        'email_pec_address': fields.function(
+            _function_get_related_email, 
+            fnct_inv=_function_set_related_email, method=True, 
+            type='char', string='Email PEC', store=False, 
             ), 
 
         # XXX To remove XXX:    

@@ -25,6 +25,8 @@
 
                             <field name="email_invoice_address" />
                             <field name="email_payment_address" />
+
+                            <field name="email_pec_address" />
                         </group>
                     </page>
                 </xpath>
